@@ -175,6 +175,59 @@ header .search button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
-  justify-items: center;
-  align-items: start;
+}
+
+.pokemons .pokemon-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 35px 0px; 
+  position: relative;
+  /*
+  align-items: center;
+  gap: 20px;*/
+}
+
+.pokemon-info:hover {
+  cursor: pointer;
+  scale: 1.15;
+}
+
+.pokemons .pokemon-info .pokemon-id{
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  padding: 5px;
+  width: 25%;
+  justify-content: center;
+  border-radius: 10px 0px 15px 0px; 
+  background-color: white;
+}
+
+.pokemons .pokemon-info .image-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.pokemons .pokemon-info .image{
+  width: 60%;
+}
+
+.pokemons .pokemon-info .image img{
+  width: 100%;
+}
+
+.pokemons .pokemon-info .pokemon-name{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
 }
