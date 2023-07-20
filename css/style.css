@@ -94,9 +94,25 @@ header .search button {
   cursor: pointer;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
 .pokemons-types li:hover {
   scale: 1.12;
 }
+
 
 #bug {
   background: #92BC2C;
@@ -230,4 +246,30 @@ header .search button {
   font-size: 30px;
   font-weight: bold;
   color: #fff;
+}
+
+.pokemons .pokemon-info .pokemon-types{
+  display: flex;
+  gap: 10px;
+}
+
+.pokemons .pokemon-info .pokemon-types img{
+  width: 20px;
+}
+
+.pokemon-infos {
+  width: 700px;
+  height: 1000px;
+  border-radius: 15px;
+  background-color: var(--cor-fundo);
+  color: #fff;
+  overflow: auto;
+  position: relative;
+}
+
+.pokemon-infos .card-header {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px 15px 0 0px;
+  background: var(--cor-principal);
 }
