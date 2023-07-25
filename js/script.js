@@ -126,7 +126,7 @@ async function getMoreInfos (pokemon, index) {
   const iconPrev = document.createElement('i')
   iconPrev.classList.add('fa-solid')
   iconPrev.classList.add('fa-chevron-left')
-  pokemonInfos.appendChild(iconPrev)
+  overlay.appendChild(iconPrev)
 
   iconPrev.addEventListener('click', () => {
     overlay.remove()
@@ -139,7 +139,7 @@ async function getMoreInfos (pokemon, index) {
   const iconLater = document.createElement('i')
   iconLater.classList.add('fa-solid')
   iconLater.classList.add('fa-chevron-right')
-  pokemonInfos.appendChild(iconLater)
+  overlay.appendChild(iconLater)
 
   iconLater.addEventListener('click', () => {
     overlay.remove()
@@ -687,6 +687,6 @@ const getTypeImg = (type) => {
       return "img/water.svg"
       default:
       return "#"
-  }
+    }
   }
   

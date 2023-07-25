@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #242424;
+  background-color: var(--cor-fundo);
   border-radius: 10px;
 }
 
@@ -26,8 +26,8 @@
 }
 
 :root {
-  --cor-fundo: #333333;
-  --cor-principal: #D6C889;
+  --cor-fundo: #2d3142;
+  --cor-principal: #f4442e;
 }
 
 body {
@@ -63,15 +63,17 @@ header .search input {
   width: 40vw;
   border-radius: 3px;
   position: relative;
+  border: none;
 }
 
 header .search button {
   cursor: pointer;
-  background-color: #D6C889;
+  background-color: white;
   padding: 10px;
   border-radius: 0px 3px 3px 0px;
   position: absolute;
   right: 0;
+  border: none;
   color: var(--cor-fundo);
 }
 
@@ -110,80 +112,7 @@ header .search button {
 }
 
 .pokemons-types li:hover {
-  scale: 1.12;
-}
-
-
-#bug {
-  background: #92BC2C;
-}
-
-#dark {
-  background: #595761;
-}
-
-#dragon {
-  background: #0C69C8;
-}
-
-#electric {
-  background: #F2D94E;
-}
-
-#fire {
-  background: #FBA54C;
-}
-
-#fairy {
-  background: #EE90E6;
-}
-
-#fighting {
-  background: #D3425F;
-}
-
-#flying {
-  background: #A1BBEC;
-}
-
-#ghost {
-  background: #5F6DBC;
-}
-
-#grass {
-  background: #5FBD58;
-}
-
-#ground {
-  background: #DA7C4D;
-}
-
-#ice {
-  background: #75D0C1;
-}
-
-#normal {
-  background: #A0A29F;
-}
-
-#poison {
-  background: #B763CF;
-}
-
-#psychic {
-  background: #FA8581;
-}
-
-#rock {
-  background: #C9BB8A;
-}
-
-#steel {
-  background: #5695A3;
-}
-
-#water {
-  background: #539DDF;
+  scale: 0.5;
 }
 
 .pokemons {
@@ -202,9 +131,6 @@ header .search button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 35px 0px; 
   position: relative;
-  /*
-  align-items: center;
-  gap: 20px;*/
 }
 
 .pokemon-info:hover {
@@ -221,7 +147,8 @@ header .search button {
   width: 25%;
   justify-content: center;
   border-radius: 10px 0px 15px 0px; 
-  background-color: white;
+  background-color: var(--cor-principal);
+  color: white;
 }
 
 .pokemons .pokemon-info .image-container {
@@ -268,9 +195,12 @@ header .search button {
 }
 
 .pokemon-infos .card-header {
-  width: 100%;
-  height: 40px;
-  border-radius: 10px 10px 0 0;
+  display: flex;
+  padding: 5px;
+  width: 20%;
+  justify-content: center;
+  border-radius: 10px 0px 15px 0px; 
+  height: 30px;
   background: var(--cor-principal);
 }
 
@@ -344,14 +274,6 @@ header .search button {
   z-index: 2;
 }
 
-.pokemon-infos .pokemon-container .pokeball{
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 300px;
-}
-
 .pokemon-container .pokemon-status{
   display: flex;
   flex-direction: column;
@@ -361,7 +283,7 @@ header .search button {
 }
 
 .pokemon-container .pokemon-status h2{
-  color: var(--cor-principal);
+  color: white;
 }
 
 .pokemon-container .pokemon-status .status{
@@ -393,13 +315,12 @@ header .search button {
 }
 
 .pokemon-container .pokemon-status .statistic span:first-child{
-  width: 30%;
   font-weight: 400;
 }
 
 .pokemon-container .pokemon-status .statistic-bar{
   background-color: var(--cor-principal);
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .pokemon-container .pokemon-weaknesses {
@@ -409,7 +330,7 @@ header .search button {
 }
 
 .pokemon-container .pokemon-weaknesses h2{
-  color: var(--cor-principal);
+  color: white;
 }
 
 
@@ -426,7 +347,7 @@ header .search button {
 }
 
 .pokemon-container .pokemon-evolutions h2{
-  color: var(--cor-principal);
+  color: white;
 }
 
 .pokemon-container .pokemon-evolutions ul {
@@ -435,7 +356,7 @@ header .search button {
   width: 100%;
   padding: 10px;
   border-radius: 15px;
-  background-color: #242424;
+  background-color: var(--cor-fundo);
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -456,7 +377,7 @@ header .search button {
 .pokemon-container .pokemon-evolutions .requirement-evolution {
   cursor: default;
   padding: 10px;
-  background-color: #1b1b1b;
+  background-color: #9BA4B5;
 }
 
 .pokemon-container .pokemon-evolutions .item-evolution {
@@ -484,19 +405,53 @@ header .search button {
 }
 
 .fa-chevron-left {
+  color: white;
   top: 50%;
-  left: 0;
+  left: 25vw;
   position: absolute;
-  padding: 5px;
+  padding: 10px;
   font-size: 25px;
   cursor: pointer;
 }
 
 .fa-chevron-right {
+  color: white;
+
   font-size: 25px;
   top: 50%;
-  right: 0;
+  right: 25vw;
   position: absolute;
   padding: 5px;
   cursor: pointer;
+}
+
+#fire {
+  background-color: #FF7F11;
+  color: white
+
+}
+
+#bug {
+  background-color: #92bc2c;
+  color: white
+}
+
+#water {
+  background-color: #3c91e6;
+  color: white
+}
+
+#flying {
+  background-color: #a1bbec;
+  color: white
+}
+
+#poison {
+  background-color: #b763cf;
+  color: white;
+}
+
+#psychic {
+  background-color: #fa8581;
+  color: white
 }
